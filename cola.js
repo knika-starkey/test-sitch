@@ -23,35 +23,31 @@ function printProducts(products) {
     );
   }
 }
-function compareCalories(colaA, colaB) {
-  return colaA.calories > colaB.calories
+let compareCalories = (colaA, colaB) =>
+  colaA.calories > colaB.calories
     ? 1
     : colaA.calories == colaB.calories
     ? 0
     : -1;
-}
-function compareName(colaA, colaB) {
-  return colaA.name > colaB.name ? 1 : colaA.name == colaB.name ? 0 : -1;
-}
 
-function compareColor(colaA, colaB) {
-  return colaA.color > colaB.color ? 1 : colaA.color == colaB.color ? 0 : -1;
-}
+let compareName = (colaA, colaB) =>
+  colaA.name > colaB.name ? 1 : colaA.name == colaB.name ? 0 : -1;
 
-function reverceCompareCalories(colaA, colaB) {
-  return colaA.calories > colaB.calories
+let compareColor = (colaA, colaB) =>
+  colaA.color > colaB.color ? 1 : colaA.color == colaB.color ? 0 : -1;
+
+let reverceCompareCalories = (colaA, colaB) =>
+  colaA.calories > colaB.calories
     ? -1
     : colaA.calories == colaB.calories
     ? 0
     : 1;
-}
-function reverseCompareName(colaA, colaB) {
-  return colaA.name > colaB.name ? -1 : colaA.name == colaB.name ? 0 : 1;
-}
 
-function reverseCompareColor(colaA, colaB) {
-  return colaA.color > colaB.color ? -1 : colaA.color == colaB.color ? 0 : 1;
-}
+let reverseCompareName = (colaA, colaB) =>
+  colaA.name > colaB.name ? -1 : colaA.name == colaB.name ? 0 : 1;
+
+let reverseCompareColor = (colaA, colaB) =>
+  colaA.color > colaB.color ? -1 : colaA.color == colaB.color ? 0 : 1;
 
 printProducts(products);
 let order = prompt("reverse or normal?");
